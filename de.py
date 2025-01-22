@@ -9,6 +9,11 @@ root.geometry("320x500+500+100")
 # Définition du titre de la fenêtre
 root.title("Jeu de simulation de dé")
 
+def play():
+    pass
+
+
+
 # Création d'un label pour le texte d'instruction
 label1 = Label(root, text="Choisir un numéro entre 1 et 6", pady=10, bg="blue", fg="white", font=("Arial", 14, "bold"))
 # Positionnement du label dans une grille à la ligne 1 et colonnes 1-2
@@ -32,6 +37,9 @@ label_image = Label(root, image=image_de)
 label_image.image = image_de
 # Positionnement de l'image dans une grille à la ligne 3 et colonnes 1-2
 label_image.grid(row=3, column=1, columnspan=2)
+
+button_play = Button(root, text="Lancer le dé", fg = "blue", font=("Arial", 14, "bold"), width=15, height=3, command=play)
+button_play.grid(row=4, column=1, padx= 20, pady=20)
 
 
 
