@@ -9,8 +9,15 @@ root.geometry("500x500+500+100")
 # Définition du titre de la fenêtre
 root.title("Jeu de simulation de dé")
 
+# Fonction afin de lancer le bouton "lancer le dé"
 def play():
-    pass
+    # Récupère les images dans la liste, il prend une image aléatoirement et l'affiche
+    choice_image = random.choice(list_images)
+    # Chargement aléatoire d'une image depuis Choice image qui est relié à list_images
+    image1 = ImageTk.PhotoImage(Image.open(choice_image))
+    # Met à jour l'image affichée dans le label
+    label_image.configure(image=image1)
+    label_image.image = image1
 
 
 
