@@ -34,7 +34,7 @@ def play():
     else:
         number = 6
 
-    if number != choice_number.get():
+    if number != int(choice_number.get()):
         label_result.config(text="Vous avez perdu")
     else:
         label_result.config(text="Vous avez gagné")
