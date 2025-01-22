@@ -5,7 +5,7 @@ import random
 
 root = Tk()
 # Définition des dimensions de la fenêtre et de sa position sur l'écran
-root.geometry("320x500+500+100")
+root.geometry("500x500+500+100")
 # Définition du titre de la fenêtre
 root.title("Jeu de simulation de dé")
 
@@ -38,9 +38,13 @@ label_image.image = image_de
 # Positionnement de l'image dans une grille à la ligne 3 et colonnes 1-2
 label_image.grid(row=3, column=1, columnspan=2)
 
+# Afficher les boutons pour lancer le dé
 button_play = Button(root, text="Lancer le dé", fg = "blue", font=("Arial", 14, "bold"), width=15, height=3, command=play)
 button_play.grid(row=4, column=1, padx= 20, pady=20)
 
+# Afficher le bouton pour quitter la fenêtre
+button_leave = Button(root, text="Quitter", fg = "red", font=("Arial", 14, "bold"), width=15, height=3, command=root.quit)
+button_leave.grid(row=4, column=2, padx= 20, pady=20)
 
 
 
