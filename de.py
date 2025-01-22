@@ -36,6 +36,9 @@ def play():
         number = 6
 
     if choice_number.get() !="":
+
+        if int(choice_number.get()) <1 or int(choice_number.get())>6:
+            messagebox.showerror("Erreur", "Veuillez saisir un nombre entre 1 et 6")
         if number != int(choice_number.get()):
             label_result.config(text="Vous avez perdu")
         else:
