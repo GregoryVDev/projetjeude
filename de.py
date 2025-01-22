@@ -46,6 +46,7 @@ button_play.grid(row=4, column=1, padx= 20, pady=20)
 button_leave = Button(root, text="Quitter", fg = "red", font=("Arial", 14, "bold"), width=15, height=3, command=root.quit)
 button_leave.grid(row=4, column=2, padx= 20, pady=20)
 
+# Afficher le résultat à la fin de la partie
 label_result = Label(root, text="Resultat", pady=20, fg="red", font=("Arial", 14, "bold"))
 label_result.grid(row=5, column=1, columnspan=2)
 
