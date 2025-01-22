@@ -2,6 +2,7 @@ import random
 from tkinter import *
 from PIL import ImageTk, Image
 import random
+from tkinter import messagebox
 
 root = Tk()
 # Définition des dimensions de la fenêtre et de sa position sur l'écran
@@ -34,10 +35,14 @@ def play():
     else:
         number = 6
 
-    if number != int(choice_number.get()):
-        label_result.config(text="Vous avez perdu")
+    if choice_number.get() !="":
+        if number != int(choice_number.get()):
+            label_result.config(text="Vous avez perdu")
+        else:
+            label_result.config(text="Vous avez gagné")
     else:
-        label_result.config(text="Vous avez gagné")
+        messagebox.showerror("Erreur", "Veuillez saisir un nombre entre 1 et 6")
+
 
 
 
