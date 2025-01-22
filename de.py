@@ -11,6 +11,8 @@ root.title("Jeu de simulation de dé")
 
 # Fonction afin de lancer le bouton "lancer le dé"
 def play():
+
+    number = 0
     # Récupère les images dans la liste, il prend une image aléatoirement et l'affiche
     choice_image = random.choice(list_images)
     # Chargement aléatoire d'une image depuis Choice image qui est relié à list_images
@@ -18,6 +20,24 @@ def play():
     # Met à jour l'image affichée dans le label
     label_image.configure(image=image1)
     label_image.image = image1
+
+    if choice_image == "images/de1.png":
+        number = 1
+    elif choice_image == "images/de2.png":
+        number = 2
+    elif choice_image == "images/de3.png":
+        number = 3
+    elif choice_image == "images/de4.png":
+        number = 4
+    elif choice_image == "images/de5.png":
+        number = 5
+    else:
+        number = 6
+
+    if number != choice_number.get():
+        label_result.config(text="Vous avez perdu")
+    else:
+        label_result.config(text="Vous avez gagné")
 
 
 
@@ -54,7 +74,7 @@ button_leave = Button(root, text="Quitter", fg = "red", font=("Arial", 14, "bold
 button_leave.grid(row=4, column=2, padx= 20, pady=20)
 
 # Afficher le résultat à la fin de la partie
-label_result = Label(root, text="Resultat", pady=20, fg="red", font=("Arial", 14, "bold"))
+label_result = Label(root, text="", pady=20, fg="red", font=("Arial", 14, "bold"))
 label_result.grid(row=5, column=1, columnspan=2)
 
 root.mainloop()
